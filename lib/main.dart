@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -73,6 +74,14 @@ class _MainPageState extends State<MainPage> {
                           radius: 40,
                           backgroundImage:
                               AssetImage('assets/images/omosh_copy.jpeg'),
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          'Ruiyot Abby',
+                          style: GoogleFonts.sanchez(
+                            fontSize: 20,
+                            color: Colors.white,
+                          ),
                         )
                       ],
                     ),
