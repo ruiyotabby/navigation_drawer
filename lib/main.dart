@@ -29,6 +29,21 @@ class _MainPageState extends State<MainPage> {
     Center(
       child: Text('Inbox'),
     ),
+    Center(
+      child: Text('Starred'),
+    ),
+    Center(
+      child: Text('Sent'),
+    ),
+    Center(
+      child: Text('Draft'),
+    ),
+    Center(
+      child: Text('Trash'),
+    ),
+    Center(
+      child: Text('Spam'),
+    ),
   ];
   @override
   Widget build(BuildContext context) {
@@ -37,6 +52,7 @@ class _MainPageState extends State<MainPage> {
         appBar: AppBar(
           title: Text('Navigation Bar Drawer'),
         ),
+        body: pages[indecClicked],
       ),
     );
   }
