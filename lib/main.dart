@@ -53,7 +53,21 @@ class _MainPageState extends State<MainPage> {
           title: Text('Navigation Bar Drawer'),
         ),
         body: pages[indecClicked],
-        drawer: Drawer(),
+        drawer: Drawer(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              DrawerHeader(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    fit: BoxFit.fill,
+                    image: AssetImage('assets/images/images (20).jpeg'),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
