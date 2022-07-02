@@ -36,7 +36,7 @@ class _MainPageState extends State<MainPage> {
       child: Text('Sent'),
     ),
     Center(
-      child: Text('Draft'),
+      child: Text('Drafts'),
     ),
     Center(
       child: Text('Trash'),
@@ -53,6 +53,7 @@ class _MainPageState extends State<MainPage> {
           title: Text('Navigation Bar Drawer'),
         ),
         body: pages[indecClicked],
+        drawer: Drawer(),
       ),
     );
   }
