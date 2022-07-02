@@ -15,6 +15,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
+var indecClicked = 0;
+
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
 
@@ -23,8 +25,19 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  final pages = [
+    Center(
+      child: Text('Inbox'),
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Navigation Drawer'),
+        ),
+      ),
+    );
   }
 }
