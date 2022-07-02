@@ -68,6 +68,7 @@ class _MainPageState extends State<MainPage> {
                   child: Container(
                     child: Column(
                       children: [
+                        SizedBox(height: 10),
                         CircleAvatar(
                           radius: 40,
                           backgroundImage:
