@@ -35,7 +35,7 @@ class _MainPageState extends State<MainPage> {
     return Container(
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Navigation Drawer'),
+          title: Text('Navigation Bar Drawer'),
         ),
       ),
     );
