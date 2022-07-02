@@ -82,7 +82,15 @@ class _MainPageState extends State<MainPage> {
                             fontSize: 20,
                             color: Colors.white,
                           ),
-                        )
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          'ruiyotabby@gmail.com',
+                          style: GoogleFonts.sanchez(
+                            fontSize: 15,
+                            color: Colors.white,
+                          ),
+                        ),
                       ],
                     ),
                   )),
