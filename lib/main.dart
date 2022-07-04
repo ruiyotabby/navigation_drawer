@@ -79,7 +79,7 @@ class _MainPageState extends State<MainPage> {
                       SizedBox(height: 10),
                       Text(
                         'Ruiyot Abby',
-                        style: GoogleFonts.sanchez(
+                        style: GoogleFonts.roboto(
                           fontSize: 20,
                           color: Colors.white,
                         ),
@@ -87,7 +87,7 @@ class _MainPageState extends State<MainPage> {
                       SizedBox(height: 5),
                       Text(
                         'ruiyotabby@gmail.com',
-                        style: GoogleFonts.sanchez(
+                        style: GoogleFonts.roboto(
                           fontSize: 15,
                           color: Colors.white,
                         ),
@@ -107,6 +107,16 @@ class _MainPageState extends State<MainPage> {
                         color: indecClicked == 0
                             ? Defaults.drawerItemSelectorColor
                             : Defaults.drawerItemColor,
+                      ),
+                      title: Text(
+                        Defaults.drawerItemText[0],
+                        style: GoogleFonts.roboto(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                          color: indecClicked == 0
+                              ? Defaults.drawerItemSelectorColor
+                              : Defaults.drawerItemColor,
+                        ),
                       ),
                     ),
                   ],
