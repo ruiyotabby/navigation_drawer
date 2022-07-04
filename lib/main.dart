@@ -105,6 +105,7 @@ class _MainPageState extends State<MainPage> {
                         setState(() {
                           indexClicked = 0;
                         });
+                        Navigator.pop(context);
                       }),
                       leading: Icon(
                         Defaults.drawerItemIcon[0],
