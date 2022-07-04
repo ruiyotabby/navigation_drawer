@@ -110,9 +110,11 @@ class DrawerTile extends StatelessWidget {
   const DrawerTile({
     Key? key,
     required this.index,
+    required this.onTap,
   }) : super(key: key);
 
   final int index;
+  final Function onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -122,6 +124,7 @@ class DrawerTile extends StatelessWidget {
         children: [
           ListTile(
             onTap: () {
+              onTap;
               Navigator.pop(context);
             },
             leading: Icon(
