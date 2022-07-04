@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:navigation_drawer/defaults/defaults.dart';
 
@@ -97,7 +96,31 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ),
               ),
-              DrawerTile(),
+              Expanded(
+                child: ListView(
+                  padding: EdgeInsets.zero,
+                  children: [
+                    DrawerTile(
+                      index: 0,
+                      onTap: () {
+                        setState(() {
+                          indexClicked = 0;
+                        });
+                        Navigator.pop(context);
+                      },
+                    ),
+                    DrawerTile(
+                      index: 1,
+                      onTap: () {
+                        setState(() {
+                          indexClicked = 1;
+                        });
+                        Navigator.pop(context);
+                      },
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
@@ -118,34 +141,24 @@ class DrawerTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView(
-        padding: EdgeInsets.zero,
-        children: [
-          ListTile(
-            onTap: () {
-              onTap;
-              Navigator.pop(context);
-            },
-            leading: Icon(
-              Defaults.drawerItemIcon[index],
-              size: 35,
-              color: indexClicked == index
-                  ? Defaults.drawerItemSelectorColor
-                  : Defaults.drawerItemColor,
-            ),
-            title: Text(
-              Defaults.drawerItemText[index],
-              style: GoogleFonts.roboto(
-                fontSize: 20,
-                fontWeight: FontWeight.w500,
-                color: indexClicked == 0
-                    ? Defaults.drawerItemSelectorColor
-                    : Defaults.drawerItemColor,
-              ),
-            ),
-          ),
-        ],
+    return ListTile(
+      onTap: onTap(),
+      leading: Icon(
+        Defaults.drawerItemIcon[index],
+        size: 35,
+        color: indexClicked == index
+            ? Defaults.drawerItemSelectorColor
+            : Defaults.drawerItemColor,
+      ),
+      title: Text(
+        Defaults.drawerItemText[index],
+        style: GoogleFonts.roboto(
+          fontSize: 20,
+          fontWeight: FontWeight.w500,
+          color: indexClicked == index
+              ? Defaults.drawerItemSelectorColor
+              : Defaults.drawerItemColor,
+        ),
       ),
     );
   }
