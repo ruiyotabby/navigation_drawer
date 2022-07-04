@@ -157,23 +157,28 @@ class DrawerTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      onTap: onTap,
-      leading: Icon(
-        Defaults.drawerItemIcon[index],
-        size: 35,
-        color: indexClicked == index
-            ? Defaults.drawerItemSelectorColor
-            : Defaults.drawerItemColor,
-      ),
-      title: Text(
-        Defaults.drawerItemText[index],
-        style: GoogleFonts.roboto(
-          fontSize: 20,
-          fontWeight: FontWeight.w500,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 7.0),
+      child: ListTile(
+        onTap: onTap,
+        selected: indexClicked == index,
+        selectedTileColor: Defaults.drawerSelectedTileColor,
+        leading: Icon(
+          Defaults.drawerItemIcon[index],
+          size: 35,
           color: indexClicked == index
               ? Defaults.drawerItemSelectorColor
               : Defaults.drawerItemColor,
+        ),
+        title: Text(
+          Defaults.drawerItemText[index],
+          style: GoogleFonts.roboto(
+            fontSize: 20,
+            fontWeight: FontWeight.w500,
+            color: indexClicked == index
+                ? Defaults.drawerItemSelectorColor
+                : Defaults.drawerItemColor,
+          ),
         ),
       ),
     );
