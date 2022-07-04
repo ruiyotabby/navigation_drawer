@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:navigation_drawer/defaults/defaults.dart';
 
@@ -96,41 +97,52 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ),
               ),
-              Expanded(
-                child: ListView(
-                  padding: EdgeInsets.zero,
-                  children: [
-                    ListTile(
-                      onTap: (() {
-                        setState(() {
-                          indexClicked = 0;
-                        });
-                        Navigator.pop(context);
-                      }),
-                      leading: Icon(
-                        Defaults.drawerItemIcon[0],
-                        size: 35,
-                        color: indexClicked == 0
-                            ? Defaults.drawerItemSelectorColor
-                            : Defaults.drawerItemColor,
-                      ),
-                      title: Text(
-                        Defaults.drawerItemText[0],
-                        style: GoogleFonts.roboto(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
-                          color: indexClicked == 0
-                              ? Defaults.drawerItemSelectorColor
-                              : Defaults.drawerItemColor,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              DrawerTile(),
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class DrawerTile extends StatelessWidget {
+  const DrawerTile({
+    Key? key,
+    required this.index,
+  }) : super(key: key);
+
+  final int index;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: [
+          ListTile(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            leading: Icon(
+              Defaults.drawerItemIcon[0],
+              size: 35,
+              color: indexClicked == 0
+                  ? Defaults.drawerItemSelectorColor
+                  : Defaults.drawerItemColor,
+            ),
+            title: Text(
+              Defaults.drawerItemText[0],
+              style: GoogleFonts.roboto(
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+                color: indexClicked == 0
+                    ? Defaults.drawerItemSelectorColor
+                    : Defaults.drawerItemColor,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
