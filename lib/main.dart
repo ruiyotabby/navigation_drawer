@@ -59,41 +59,43 @@ class _MainPageState extends State<MainPage> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               DrawerHeader(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.fill,
-                      image: AssetImage('assets/images/images (20).jpeg'),
-                    ),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    fit: BoxFit.fill,
+                    image: AssetImage('assets/images/images (20).jpeg'),
                   ),
-                  padding: EdgeInsets.zero,
-                  child: Container(
-                    child: Column(
-                      children: [
-                        SizedBox(height: 10),
-                        CircleAvatar(
-                          radius: 40,
-                          backgroundImage:
-                              AssetImage('assets/images/omosh_copy.jpeg'),
+                ),
+                padding: EdgeInsets.zero,
+                child: Container(
+                  child: Column(
+                    children: [
+                      SizedBox(height: 10),
+                      CircleAvatar(
+                        radius: 40,
+                        backgroundImage:
+                            AssetImage('assets/images/omosh_copy.jpeg'),
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        'Ruiyot Abby',
+                        style: GoogleFonts.sanchez(
+                          fontSize: 20,
+                          color: Colors.white,
                         ),
-                        SizedBox(height: 10),
-                        Text(
-                          'Ruiyot Abby',
-                          style: GoogleFonts.sanchez(
-                            fontSize: 20,
-                            color: Colors.white,
-                          ),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        'ruiyotabby@gmail.com',
+                        style: GoogleFonts.sanchez(
+                          fontSize: 15,
+                          color: Colors.white,
                         ),
-                        SizedBox(height: 5),
-                        Text(
-                          'ruiyotabby@gmail.com',
-                          style: GoogleFonts.sanchez(
-                            fontSize: 15,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-                  )),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              ListView()
             ],
           ),
         ),
