@@ -104,6 +104,9 @@ class _MainPageState extends State<MainPage> {
                       leading: Icon(
                         Defaults.drawerItemIcon[0],
                         size: 35,
+                        color: indecClicked == 0
+                            ? Defaults.drawerItemSelectorColor
+                            : Defaults.drawerItemColor,
                       ),
                     ),
                   ],
