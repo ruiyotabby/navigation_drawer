@@ -137,7 +137,7 @@ class DrawerTile extends StatelessWidget {
   }) : super(key: key);
 
   final int index;
-  final Function() onTap;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
