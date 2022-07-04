@@ -137,12 +137,12 @@ class DrawerTile extends StatelessWidget {
   }) : super(key: key);
 
   final int index;
-  final Function onTap;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onTap: onTap(),
+      onTap: onTap,
       leading: Icon(
         Defaults.drawerItemIcon[index],
         size: 35,
