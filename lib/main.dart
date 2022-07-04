@@ -48,10 +48,10 @@ class _MainPageState extends State<MainPage> {
     ),
   ];
 
-  Function updateState(int index) {
+  Function() updateState(int index) {
     return () {
       setState(() {
-        indexClicked = 0;
+        indexClicked = index;
       });
       Navigator.pop(context);
     };
@@ -112,21 +112,11 @@ class _MainPageState extends State<MainPage> {
                   children: [
                     DrawerTile(
                       index: 0,
-                      onTap: () {
-                        setState(() {
-                          indexClicked = 0;
-                        });
-                        Navigator.pop(context);
-                      },
+                      onTap: updateState(0),
                     ),
                     DrawerTile(
                       index: 1,
-                      onTap: () {
-                        setState(() {
-                          indexClicked = 1;
-                        });
-                        Navigator.pop(context);
-                      },
+                      onTap: updateState(1),
                     ),
                   ],
                 ),
