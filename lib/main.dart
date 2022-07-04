@@ -47,6 +47,16 @@ class _MainPageState extends State<MainPage> {
       child: Text('Spam'),
     ),
   ];
+
+  Function updateState(int index) {
+    return () {
+      setState(() {
+        indexClicked = 0;
+      });
+      Navigator.pop(context);
+    };
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
