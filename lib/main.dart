@@ -95,7 +95,7 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ),
               ),
-              ListView()
+              ListView(),
             ],
           ),
         ),
