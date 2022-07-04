@@ -118,6 +118,22 @@ class _MainPageState extends State<MainPage> {
                       index: 1,
                       onTap: updateState(1),
                     ),
+                    DrawerTile(
+                      index: 2,
+                      onTap: updateState(2),
+                    ),
+                    DrawerTile(
+                      index: 3,
+                      onTap: updateState(3),
+                    ),
+                    DrawerTile(
+                      index: 4,
+                      onTap: updateState(4),
+                    ),
+                    DrawerTile(
+                      index: 5,
+                      onTap: updateState(5),
+                    ),
                   ],
                 ),
               ),
