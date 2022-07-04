@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class Defaults {
   static final Color? drawerItemColor = Colors.blueGrey;
   static final Color? drawerItemSelectorColor = Colors.blue[700];
+  static final Color? drawerSelectedTileColor = Colors.blue[100];
 
   static final drawerItemText = [
     'Inbox',
