@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-var indecClicked = 0;
+var indexClicked = 0;
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -54,7 +54,7 @@ class _MainPageState extends State<MainPage> {
         appBar: AppBar(
           title: Text('Navigation Bar Drawer'),
         ),
-        body: pages[indecClicked],
+        body: pages[indexClicked],
         drawer: Drawer(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -101,10 +101,15 @@ class _MainPageState extends State<MainPage> {
                   padding: EdgeInsets.zero,
                   children: [
                     ListTile(
+                      onTap: (() {
+                        setState(() {
+                          indexClicked = 0;
+                        });
+                      }),
                       leading: Icon(
                         Defaults.drawerItemIcon[0],
                         size: 35,
-                        color: indecClicked == 0
+                        color: indexClicked == 0
                             ? Defaults.drawerItemSelectorColor
                             : Defaults.drawerItemColor,
                       ),
@@ -113,7 +118,7 @@ class _MainPageState extends State<MainPage> {
                         style: GoogleFonts.roboto(
                           fontSize: 20,
                           fontWeight: FontWeight.w500,
-                          color: indecClicked == 0
+                          color: indexClicked == 0
                               ? Defaults.drawerItemSelectorColor
                               : Defaults.drawerItemColor,
                         ),
