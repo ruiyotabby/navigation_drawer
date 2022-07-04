@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:navigation_drawer/defaults/defaults.dart';
 
 void main() {
   runApp(const MyApp());
@@ -95,7 +96,19 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ),
               ),
-              ListView(),
+              Expanded(
+                child: ListView(
+                  padding: EdgeInsets.zero,
+                  children: [
+                    ListTile(
+                      leading: Icon(
+                        Defaults.drawerItemIcon[0],
+                        size: 35,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
