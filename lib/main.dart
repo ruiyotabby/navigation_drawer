@@ -128,14 +128,14 @@ class DrawerTile extends StatelessWidget {
               Navigator.pop(context);
             },
             leading: Icon(
-              Defaults.drawerItemIcon[0],
+              Defaults.drawerItemIcon[index],
               size: 35,
-              color: indexClicked == 0
+              color: indexClicked == index
                   ? Defaults.drawerItemSelectorColor
                   : Defaults.drawerItemColor,
             ),
             title: Text(
-              Defaults.drawerItemText[0],
+              Defaults.drawerItemText[index],
               style: GoogleFonts.roboto(
                 fontSize: 20,
                 fontWeight: FontWeight.w500,
